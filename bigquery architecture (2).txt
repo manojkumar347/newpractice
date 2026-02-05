@@ -1,0 +1,26 @@
+ BIGQURY IS PRIMARLY DESIGNED FOR THE PURPOSE OF DOING STORAGE,FAST AND DISTRIBUTED COMPUTE OPERATIONS:
+*****************************************************************************************************************
+1)storage componenet:storage component is also called as (colossus) 
+>>bigquery handle to store more amount of data in columnar format,and it enebles it's efficiency to perform compression and minimize operations on queris and also in the in bigquery handle data storage in  distributed file system is called as "capacitor".
+>>capacitor is automatically handle storage by applying some kind features like distribution,replication and high availability features.
+
+
+2)compute component:compute component is also called dermal component(in this complete process is in two ways) 
+dermal component is high scalable,interactive adhoc query system 
+in dremal component we some other sub components
+  >root server
+  >mixer nodes
+  >leaf  nodes
+
+>>rootserver:in root server what ever we gave the query  to the root server is doing analysis on the query it means it checks the column names and data types what ever we are gave in that and finally it is taking action on the query for further actions means root server prepare plan to run the query and it is finally assign the work to leaf nodes.
+
+>>leaf nodes:leaf nodes are responsible for doing data processing operatins as per what ever the root server assign the work to leaf server as per that leaf nodes are doing procees after that leaf nodes are assign the resultanat work to the mixer nodes.
+
+>>mixernodes: with the help of mixer nodes we doing agg/summing operations are applying on what ever the resultant data getting on top of leaf nodes and finally sending back result to root server what ever we getting on the mixer nodes for user  Visualization purpose.
+
+in this total process we observe two more components like jupyter,borg componenets
+>>jupyter component is mainly working generating esatablish communication between storage(colossus)component and compute(Dremel)component 
+>>where as coming to brog component,the total process is processed under brog component efficient manner.
+   
+
+
